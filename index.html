@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Thangoo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0b0b1a;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hidden {
+            display: none !important;
+        }
+        /* Styling for interactive sections */
+        .balloon {
+            font-size: 80px;
+            cursor: pointer;
+            animation: float 2s ease-in-out infinite alternate;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+        .btn {
+            background: #ff477e;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 0 10px #ff477e;
+        }
+        .card {
+            background: #fff8f0;
+            color: #333;
+            width: 320px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 71, 126, 0.5);
+            text-align: left;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="screen-1">
+        <div class="balloon" onclick="nextScreen(2)">🎈</div>
+        <p style="margin-top: 20px; color: #ffeb3b; font-weight: bold;">TAP ARROW TO SHOOT 🏹</p>
+    </div>
+
+    <div class="container hidden" id="screen-2">
+        <h2>🎂 Happy Birthday Thangoo 🎂</h2>
+        <p>Unaku ellaa pudhuvum vaazhthukkal...</p>
+        <button class="btn" onclick="nextScreen(3)">NEXT ➔</button>
+    </div>
+
+    <div class="container hidden" id="screen-3">
+        <h2>OUR JOURNEY ❤️</h2>
+        <p>My heart always lands right next to you.</p>
+        <button class="btn" onclick="nextScreen(4)">OPEN SPECIAL LETTER ✉️</button>
+    </div>
+
+    <div class="container hidden" id="screen-4">
+        <div class="card">
+            <h3>My Dearest Thangoo ❤️</h3>
+            <p>Happy Birthday to my sweetest Thangoo!<br><br>
+            Every moment spent with you, even across distances, fills my heart with endless warmth.<br><br>
+            You bring so much bright sunshine, cute smiles, and pure joy into my life.</p>
+            <button class="btn" style="width: 100%;" onclick="nextScreen(5)">FINAL WORDS ❤️</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="screen-5">
+        <h2>I LOVE YOU & MISS YOU THANGAMEY ❤️</h2>
+        <p>Happy Birthday My Everything ❤️</p>
+        <button class="btn" onclick="location.reload()">LOVE LOOP 🔄</button>
+    </div>
+
+    <script>
+        function nextScreen(screenNumber) {
+            // Hide all screens
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById(`screen-${i}`).classList.add('hidden');
+            }
+            // Show target screen
+            document.getElementById(`screen-${screenNumber}`).classList.remove('html' ? '' : 'hidden');
+            document.getElementById(`screen-${screenNumber}`).classList.remove('hidden');
+        }
+    </video> </body>
+</html>
